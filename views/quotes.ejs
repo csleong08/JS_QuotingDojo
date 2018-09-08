@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Hello!</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+        <style>
+            .container{
+                width: 600px;
+                margin: 0 auto;
+            }
+            span{
+                margin-left: 200px !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h3>Here are the awesome quotes!</h3>
+            <% for(var i in data) { %>
+                <p> <%= data[i].name %> </p>
+                <p><span>-<%= data[i].quote %> at <%=moment(data[i].createdAt).format("h:mm a MMMM D YYYY") %></span></p>
+            <% } %>
+        </div>
+    </body>
+</html>
+
